@@ -1,6 +1,6 @@
 package com.finankids;
 
-public class Usuario {
+public abstract class Usuario {
 
     private int id;
     private String nombre;
@@ -39,4 +39,5 @@ public class Usuario {
     public String getNombreCompleto() {
         return nombre + " " + apellido;
     }
+    public abstract void mostrarInformacion();
 }

@@ -89,7 +89,7 @@ public class Menor extends Usuario {
             System.out.println("------------------------------");
         }
     }
-
+@Override
     public void mostrarInformacion() {
         System.out.println("Menor: " + getNombreCompleto());
         System.out.println("Email: " + getEmail());

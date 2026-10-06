@@ -84,5 +84,21 @@ menor.mostrarInformacion();
 
 System.out.println();
 menor.mostrarMovimientos();
+System.out.println();
+System.out.println("=== Demostracion de polimorfismo ===");
+
+Usuario usuarioTutor = tutor;
+Usuario usuarioMenor = menor;
+
+usuarioTutor.mostrarInformacion();
+
+System.out.println();
+
+usuarioMenor.mostrarInformacion();
+System.out.println();
+System.out.println("=== Inicio del menu interactivo de FinanKids ===");
+
+MenuFinanKids menu = new MenuFinanKids(menor, tutor, meta);
+menu.mostrarMenu();
     }
 }

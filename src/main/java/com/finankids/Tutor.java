@@ -7,7 +7,7 @@ public class Tutor extends Usuario {
 
         super(idUsuario, nombre, apellido, email, contrasena);
     }
-
+@Override
     public void mostrarInformacion() {
         System.out.println("Tutor: " + getNombreCompleto());
         System.out.println("Email: " + getEmail());
