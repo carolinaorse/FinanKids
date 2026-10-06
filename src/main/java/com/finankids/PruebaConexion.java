@@ -11,7 +11,7 @@ public class PruebaConexion {
         Connection conexion = ConexionBD.conectar();
 
         if (conexion != null) {
-            System.out.println("PRUEBA EXITOSA: Java está conectado con finankids_db.");
+            System.out.println("PRUEBA EXITOSA: Java está conectado con finankids_tp2.");
         } else {
             System.out.println("PRUEBA FALLIDA: no fue posible conectar con la base de datos.");
         }

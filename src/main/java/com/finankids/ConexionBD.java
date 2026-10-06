@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConexionBD {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/finankids_db";
+            "jdbc:mysql://localhost:3306/finankids_tp2";
 
     private static final String USUARIO = "root";
     private static final String CONTRASENA = "";
@@ -22,7 +22,7 @@ public class ConexionBD {
                     CONTRASENA
             );
 
-            System.out.println("Conexión a finankids_db realizada correctamente.");
+            System.out.println("Conexión a finankids_tp2 realizada correctamente.");
 
             return conexion;
 
