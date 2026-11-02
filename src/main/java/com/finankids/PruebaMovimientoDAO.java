@@ -2,6 +2,8 @@ package com.finankids;
 
 import java.time.LocalDateTime;
 
+import com.finankids.dao.MovimientoDAO;
+
 public class PruebaMovimientoDAO {
 
     public static void main(String[] args) {

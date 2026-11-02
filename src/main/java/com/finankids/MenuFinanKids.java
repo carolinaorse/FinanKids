@@ -2,6 +2,11 @@ package com.finankids;
 
 import java.util.Scanner;
 
+import com.finankids.model.Menor;
+import com.finankids.model.MetaAhorro;
+import com.finankids.model.SolicitudDinero;
+import com.finankids.model.Tutor;
+
 public class MenuFinanKids {
 
 private final Scanner scanner;

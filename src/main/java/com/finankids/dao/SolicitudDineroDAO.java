@@ -1,8 +1,10 @@
-package com.finankids;
+package com.finankids.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import com.finankids.ConexionBD;
 
 public class SolicitudDineroDAO {
 

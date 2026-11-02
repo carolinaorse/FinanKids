@@ -1,4 +1,8 @@
+
 package com.finankids;
+
+import com.finankids.dao.RecompensaDAO;
+import com.finankids.dao.TareaDAO;
 
 public class PruebaRecompensaDAO {
 
@@ -7,32 +11,41 @@ public class PruebaRecompensaDAO {
         TareaDAO tareaDAO = new TareaDAO();
 
         boolean tareaGuardada = tareaDAO.guardarTarea(
-                2,
-                1,
-                "Lavar el auto",
-                "Lavar y limpiar el auto familiar",
-                "PENDIENTE"
+            1,
+            1,
+            2,
+            "Lavar el auto",
+            "Lavar y limpiar el auto familiar"
         );
 
         if (!tareaGuardada) {
-            System.out.println("NO SE PUDO GUARDAR LA TAREA.");
+            System.out.println(
+                "NO SE PUDO GUARDAR LA TAREA."
+            );
             return;
         }
 
-        System.out.println("TAREA GUARDADA CORRECTAMENTE.");
+        System.out.println(
+            "TAREA GUARDADA CORRECTAMENTE."
+        );
 
         RecompensaDAO recompensaDAO = new RecompensaDAO();
 
-        boolean recompensaGuardada = recompensaDAO.guardarRecompensa(
-                2,
-                3000.00,
-                "PENDIENTE"
-        );
+        boolean recompensaGuardada =
+                recompensaDAO.guardarRecompensa(
+                    2,
+                    3000.00,
+                    "PENDIENTE"
+                );
 
         if (recompensaGuardada) {
-            System.out.println("RECOMPENSA GUARDADA CORRECTAMENTE.");
+            System.out.println(
+                "RECOMPENSA GUARDADA CORRECTAMENTE."
+            );
         } else {
-            System.out.println("NO SE PUDO GUARDAR LA RECOMPENSA.");
+            System.out.println(
+                "NO SE PUDO GUARDAR LA RECOMPENSA."
+            );
         }
     }
 }

@@ -1,5 +1,11 @@
 package com.finankids;
 
+import com.finankids.model.Menor;
+import com.finankids.model.MetaAhorro;
+import com.finankids.model.SolicitudDinero;
+import com.finankids.model.Tutor;
+import com.finankids.model.Usuario;
+
 public class Main {
 
     public static void main(String[] args) {

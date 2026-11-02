@@ -2,6 +2,10 @@ package com.finankids;
 
 import java.time.LocalDateTime;
 
+import com.finankids.dao.MovimientoDAO;
+import com.finankids.dao.RecompensaDAO;
+import com.finankids.dao.TareaDAO;
+
 public class PruebaValidacionTarea {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.finankids;
+package com.finankids.model;
 
 import java.util.ArrayList;
 import java.util.List;

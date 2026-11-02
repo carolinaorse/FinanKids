@@ -1,10 +1,10 @@
-package com.finankids;
+package com.finankids.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
-
+import com.finankids.ConexionBD;
 public class MovimientoDAO {
 
     public boolean guardarMovimiento(

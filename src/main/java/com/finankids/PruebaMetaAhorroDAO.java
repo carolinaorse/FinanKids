@@ -1,5 +1,7 @@
 package com.finankids;
 
+import com.finankids.dao.MetaAhorroDAO;
+
 public class PruebaMetaAhorroDAO {
 
     public static void main(String[] args) {

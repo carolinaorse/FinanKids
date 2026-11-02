@@ -1,22 +1,22 @@
-package com.finankids;
+package com.finankids.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class TareaDAO {
+import com.finankids.ConexionBD;
 
-    public boolean guardarTarea(
-            int idTutor,
-            int idMenor,
-            String titulo,
-            String descripcion,
+public class RecompensaDAO {
+
+    public boolean guardarRecompensa(
+            int idTarea,
+            double monto,
             String estado) {
 
         String sql = """
-                INSERT INTO tareas
-                (id_tutor, id_menor, titulo, descripcion, estado)
-                VALUES (?, ?, ?, ?, ?)
+                INSERT INTO recompensas
+                (id_tarea, monto, estado)
+                VALUES (?, ?, ?)
                 """;
 
         try (
@@ -24,11 +24,9 @@ public class TareaDAO {
                 PreparedStatement statement = conexion.prepareStatement(sql)
         ) {
 
-            statement.setInt(1, idTutor);
-            statement.setInt(2, idMenor);
-            statement.setString(3, titulo);
-            statement.setString(4, descripcion);
-            statement.setString(5, estado);
+            statement.setInt(1, idTarea);
+            statement.setDouble(2, monto);
+            statement.setString(3, estado);
 
             int filasInsertadas = statement.executeUpdate();
 
@@ -36,20 +34,20 @@ public class TareaDAO {
 
         } catch (SQLException e) {
 
-            System.out.println("Error al guardar la tarea:");
+            System.out.println("Error al guardar la recompensa:");
             System.out.println(e.getMessage());
 
             return false;
         }
     }
-    public boolean actualizarEstadoTarea(
-        int idTarea,
+    public boolean actualizarEstadoRecompensa(
+        int idRecompensa,
         String nuevoEstado) {
 
     String sql = """
-            UPDATE tareas
+            UPDATE recompensas
             SET estado = ?
-            WHERE id_tarea = ?
+            WHERE id_recompensa = ?
             """;
 
     try (
@@ -58,7 +56,7 @@ public class TareaDAO {
     ) {
 
         statement.setString(1, nuevoEstado);
-        statement.setInt(2, idTarea);
+        statement.setInt(2, idRecompensa);
 
         int filasActualizadas = statement.executeUpdate();
 
@@ -66,7 +64,7 @@ public class TareaDAO {
 
     } catch (SQLException e) {
 
-        System.out.println("Error al actualizar el estado de la tarea:");
+        System.out.println("Error al actualizar el estado de la recompensa:");
         System.out.println(e.getMessage());
 
         return false;

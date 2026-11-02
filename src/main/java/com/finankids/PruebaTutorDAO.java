@@ -1,5 +1,7 @@
 package com.finankids;
 
+import com.finankids.dao.UsuarioDAO;
+
 public class PruebaTutorDAO {
 
     public static void main(String[] args) {

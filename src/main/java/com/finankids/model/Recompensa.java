@@ -1,4 +1,4 @@
-package com.finankids;
+package com.finankids.model;
 
 public class Recompensa {
 
